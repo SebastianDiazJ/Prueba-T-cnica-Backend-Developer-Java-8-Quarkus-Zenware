@@ -1,8 +1,16 @@
 package com.zenware.model;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+
 public class Producto {
+
     private Long id;
+
+    @NotBlank(message = "El nombre no puede estar vacío")
     private String nombre;
+
+    @Min(value = 0, message = "El precio debe ser mayor o igual a cero")
     private double precio;
 
     public Producto() {}
@@ -20,7 +28,7 @@ public class Producto {
         this.precio += this.precio * (porcentaje / 100);
     }
 
-    // Getters y setters
+    // Getters y Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -29,4 +37,9 @@ public class Producto {
 
     public double getPrecio() { return precio; }
     public void setPrecio(double precio) { this.precio = precio; }
+
+    @Override
+    public String toString() {
+        return "Producto{id=" + id + ", nombre='" + nombre + "', precio=" + precio + "}";
+    }
 }
