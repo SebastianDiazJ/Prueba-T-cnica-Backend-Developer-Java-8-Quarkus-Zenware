@@ -80,10 +80,10 @@ Verificar desde frontend o Postman que se incluya Content-Type: application/json
    WARN: Este error es recuperable y está relacionado con el uso incorrecto del API. No requiere nivel ERROR salvo que se vuelva persistente.
 
 ### 🌐 5.4 Preguntas AWS
-✅ EC2 vs Lambda
-Usaría EC2 cuando se necesita control total sobre el entorno, ejecución continua o mantener procesos de larga duración.
+EC2 vs Lambda
+Usaría EC2 cuando se necesita control total sobre el entorno, aunque no la manejo muy bien pero se puede ahcer ya que permite  ejecución continua o mantener procesos de larga duración.
 
-✅ Servicios de observabilidad
+Servicios de observabilidad
 CloudWatch: Monitoreo de logs, métricas y alarmas.
 
 AWS X-Ray: Trazabilidad de peticiones entre microservicios.
@@ -92,15 +92,13 @@ AWS CloudTrail: Auditoría de acciones realizadas en los servicios AWS.
 
 ### 📊 5.5 Ejercicio SQL
 1. Consulta:
-   sql
-   Copiar
-   Editar
+
    SELECT * FROM productos
    WHERE precio > 100000
    ORDER BY precio DESC
    LIMIT 5;
 2. Cuándo usar INDEX(nombre)
-   Cuando se realizan muchas búsquedas por nombre exacto o parcial, el índice acelera la recuperación de registros.
+   Cuando uno realiza muchas búsquedas por nombre exacto o parcial, el índice acelera la recuperación de registros.
 
 📅 Estado actual
 Modelo Producto implementado y validado.
