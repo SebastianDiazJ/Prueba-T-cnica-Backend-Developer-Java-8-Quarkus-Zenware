@@ -41,22 +41,15 @@ Se realizaron dos pruebas:
 
 Aplica un impuesto al precio, validando que el porcentaje esté entre 0% y 50%. Si no, lanza una excepción:
 
-### java
+### lo hice asi en java : 
 if (porcentaje < 0 || porcentaje > 50) {
     throw new IllegalArgumentException("Porcentaje incorrecto, el porcentaje debe estar entre 0% y 50%");
 }
 this.precio += this.precio * (porcentaje / 100); 
 
 
-## 📦 Funcionalidades Implementadas
-✅ API de Productos
-Método	Endpoint	Descripción
-GET	/productos	Listar todos los productos
-POST	/productos	Crear un producto
-GET	/productos/{id}	Obtener un producto por su ID
-DELETE	/productos/{id}	Eliminar un producto por su ID
 
-## 📘 Modelo
+## 📘 Warnings
 
 public class Producto {
 private Long id;
@@ -69,7 +62,7 @@ private Long id;
 }
 ### 🖊️ 5.3 Análisis de logs/diagnostico.log
 1. Causa raíz de la excepción
-   415 Unsupported Media Type: El error ocurre porque el cliente no está enviando el Content-Type: application/json en las solicitudes POST.
+   me causo un dolor de cabeza el 415 Unsupported Media Type: El error ocurre porque el cliente no está enviando el Content-Type: application/json en las solicitudes POST.
 
 2. Estrategia para prevenirlo
    Agregar validaciones de cabecera con filtros JAX-RS o documentar correctamente el uso esperado del API.
