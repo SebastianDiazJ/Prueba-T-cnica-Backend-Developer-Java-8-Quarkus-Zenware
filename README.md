@@ -1,23 +1,26 @@
-## ✅ 5.1 Java Core – Clase Producto
+# 👋 Bienvenido al Repositorio – Prueba Técnica Backend Developer (Java + Quarkus)
 
-Se implementó la clase `Producto` con los siguientes atributos:
+Este repositorio contiene la solución a la **Prueba Técnica para el rol de Desarrollador Backend Java 8 con Quarkus** para la empresa **Zenware**.
 
-- `id: Long`
-- `nombre: String`
-- `precio: double`
+### 📁 Subproyecto: `catalogo-productos`
 
-### Método `aplicarImpuesto(double porcentaje)`
-Aplica un impuesto al precio, validando que el porcentaje esté entre 0% y 50%. Si no, lanza una excepción:
+Dentro del subdirectorio [`/catalogo-productos`](./catalogo-productos), encontrarás la implementación de una API REST para la gestión de productos, desarrollada con:
 
-### java
-if (porcentaje < 0 || porcentaje > 50) {
-    throw new IllegalArgumentException("Porcentaje incorrecto, el porcentaje debe estar entre 0% y 50%");
-}
-this.precio += this.precio * (porcentaje / 100);
+- **Java 17**
+- **Quarkus 3**
+- **JUnit 5**
+- **Jakarta REST**
+- Validaciones con **Jakarta Bean Validation**
+- Repositorio en memoria simulado
 
-### ✔️ Pruebas Unitarias (JUnit 5)
-Se realizaron dos pruebas:
+---
 
-✅ aplicarImpuesto_valido(): valida que el cálculo sea correcto.
+## 📘 Documentación Técnica
 
-✅ aplicarImpuesto_fueraDeRango(): valida que la excepción se lance correctamente si el porcentaje no está en rango.
+Puedes consultar todos los detalles técnicos del proyecto, pruebas unitarias, análisis de logs, consultas SQL y preguntas AWS en el siguiente archivo:
+
+👉 [`/catalogo-productos/README.md`](./catalogo-productos/README.md)
+
+---
+
+Gracias por la oportunidad y por revisar esta prueba 🙌
